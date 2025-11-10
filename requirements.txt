@@ -1,0 +1,3 @@
+Pillow
+google-adk
+google-genai
