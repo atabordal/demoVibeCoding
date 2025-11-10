@@ -1,4 +1,4 @@
-from image_agent.prompts import CONVERSATION_INSTRUCTION
+from image_agent.prompts import CONVERSATION_INSTRUCTION, IMAGE_GENERATION_INSTRUCTION
 from image_agent.config import cfg
 from image_agent.tools import generate_image
 from google.adk.tools import AgentTool
@@ -15,7 +15,7 @@ image_generation_agent = Agent(
     name="Image_Generation_Agent",
     model=cfg.agent_settings.model,
     description="An agent that generates images based on a given prompt.",
-    instruction="You are an expert image generation agent. Your sole purpose is to generate images based on user prompts. Use the 'generate_image' tool to create images.",
+    instruction=IMAGE_GENERATION_INSTRUCTION,
     generate_content_config=types.GenerateContentConfig(
         temperature=0.7,
         safety_settings=[

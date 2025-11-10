@@ -1,5 +1,5 @@
-from agent.prompts import CONVERSATION_INSTRUCTION
-from agent.config import cfg
+from simple_agent.prompts import CONVERSATION_INSTRUCTION
+from simple_agent.config import cfg
 
 
 from google.adk.agents import Agent
